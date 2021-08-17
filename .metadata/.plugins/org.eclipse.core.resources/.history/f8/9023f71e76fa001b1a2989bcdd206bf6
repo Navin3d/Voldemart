@@ -1,0 +1,5 @@
+package gmc.project.voldemart.domain;
+
+public class Category {
+
+}

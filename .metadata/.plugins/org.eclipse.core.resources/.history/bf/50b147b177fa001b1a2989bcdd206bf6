@@ -1,0 +1,5 @@
+package gmc.project.voldemart.repositoies;
+
+public interface CategoryRepository extends CrudRepository<Category, Long>{
+
+}

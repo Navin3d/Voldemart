@@ -1,0 +1,18 @@
+package gmc.project.voldemart.services;
+
+import java.util.Set;
+
+import org.springframework.stereotype.Service;
+
+import gmc.project.voldemart.domain.Category;
+
+@Service
+public class CategoryServiceImpl implements CategoryService{
+
+	@Override
+	public Set<Category> findAllCategory() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,6 @@
+package gmc.project.voldemart.domain;
+
+public enum Categories {
+	COMPUTER_AND_ACCESSORIES, FURNITURE, MENS_FOOTWEAR, Masalas_Both_Industry_And_Home_made, MENS_CLOTHING, BEAUTY_AND_TOYS, MOBILES_AND_GADGETS, HOUSE_HOLD_APPLIANCES, BEST_OFFER_WITH_MAJOR_DISCOUNTS
+
+}

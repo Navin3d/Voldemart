@@ -1,0 +1,11 @@
+package gmc.project.voldemart.services;
+
+import java.util.Set;
+
+import gmc.project.voldemart.domain.Category;
+import gmc.project.voldemart.domain.Product;
+
+public interface ProductService {
+	Set<Product> getAllProducts();
+	Set<Product> getCategoryProducts(Category category);
+}

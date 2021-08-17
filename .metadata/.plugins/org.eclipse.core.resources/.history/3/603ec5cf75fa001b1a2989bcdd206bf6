@@ -1,0 +1,6 @@
+package gmc.project.voldemart.bootstrap;
+
+@Component
+public class CategoryBootstrap {
+
+}

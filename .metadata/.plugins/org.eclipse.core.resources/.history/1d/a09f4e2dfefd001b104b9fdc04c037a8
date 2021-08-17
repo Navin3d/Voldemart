@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cart</title>
+		<link rel="stylesheet" th:href="@{/css/profiled.css}" type="text/css" >
+	</head>
+	<body>
+	
+		<div class="topbar" >
+        	<div id="t1">
+		        <ul class="ul">
+		            <li><a href="/products" id="logo"><b>Volemart</b></a></li>
+		            <li><input list="user-list" class="psea"type="search" placeholder="/search-product" ></li>
+		            <datalist id="user-list">
+		                <option>Add sellers proname from db </option>
+		                <option >Navin</option>
+		                <option >Koushik</option>
+		                <option >Arul</option>
+		                <option >Murugan</option>
+		            </datalist>
+		            <li><a href="/" >Home</a></li>
+		            <li><a href="#" >About</a></li>
+		            <li><a href="/user/products" >Edit Product</a></li>
+		            <i class="fas fa-bars" id="menu"></i>
+		            <li><a href="/logout" >Log Out</a></li>
+		        </ul>
+		    </div>
+		</div><br>
+
+		    <!-- changes -->
+		<div class="contained">
+		    <div class="profileTag">
+		        <img class="proImg"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoYAbrTGLh7uh_uxA3cF0GXCxjAB2GBcywTA&usqp=CAU"/><br>
+		        <label><b th:text="${#authentication.getPrincipal().getUsername()}">Arul Murugan R</b></label>
+		        <label style="text-align:center;">(User)</label>
+		        <li class="active"><a href="/user/product/add">Add Product*</a></li>
+		        <li><a href="/user/profile/edit">Edit Profile</a></li>
+		        <li><a href="/user/products">Products Sold</a></li>
+		        <li><a href="#">Notification</a></li>
+		        <li><a href="/user/profile/edit">Change Password</a></li>
+		
+		    </div>
+		
+			<table class="table">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col">#</th>
+			      <th scope="col">Product Name</th>
+			      <th scope="col">Price</th>
+			    </tr>
+			  </thead>
+			  <tbody th:each="product : ${products}">
+			    <tr>
+			      <th scope="row" th:text="${product.id}">1</th>
+			      <td th:text="${product.name}">Mark</td>
+			      <td th:text="${product.price}" >Edit</td>
+			    </tr>
+	<!--  	    <tr>
+			      <th scope="row">2</th>
+			      <td>Jacob</td>
+			      <td>Thornton</td>
+			      <td>@fat</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">3</th>
+			      <td>Larry</td>
+			      <td>the Bird</td>
+			      <td>@twitter</td>
+			    </tr>     -->
+			  </tbody>
+			</table>
+		</div>
+	</body>
+</html>

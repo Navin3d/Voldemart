@@ -1,0 +1,57 @@
+package gmc.project.voldemart.domain;
+
+import java.time.LocalDateTime;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.Email;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "users")
+public class User {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private String firstName;
+	private String lastName;
+	
+	@Column(name = "username")
+	private String userName;
+	private String password;
+	
+	private int reports;
+	private LocalDateTime createAt;
+	private LocalDateTime modifiedAt;
+	
+	@Lob
+	private Byte[] profilePic;
+	
+	@Column(name = "email")
+	@Email
+	private String email;
+	
+	private String phoneNumber;
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	private Set<Address> address;
+	
+	@OneToMany(mappedBy = "seller", cascade = CascadeType.ALL)
+	private Set<Product> productsSold;
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	private Set<Product> productsBought;
+
+}

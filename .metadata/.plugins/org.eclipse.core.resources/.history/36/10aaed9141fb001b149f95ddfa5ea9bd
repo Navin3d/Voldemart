@@ -1,0 +1,10 @@
+package gmc.project.voldemart.services;
+
+import java.util.Set;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class CategoryServiceImpl {
+	Set<Category> findAllCategory();
+}

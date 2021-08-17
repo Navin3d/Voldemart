@@ -1,0 +1,5 @@
+package gmc.project.voldemart.commands;
+
+public class ProductCommand {
+
+}

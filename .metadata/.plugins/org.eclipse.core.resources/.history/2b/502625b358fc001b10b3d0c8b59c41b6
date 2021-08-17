@@ -1,0 +1,50 @@
+package gmc.project.voldemart.commands;
+
+import java.time.LocalDateTime;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import gmc.project.voldemart.domain.States;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+public class UpdateUserCommand {
+	
+	@JsonIgnore
+	private Long id;
+	
+	@NotBlank
+	@Size(max = 15)
+	private String firstName;
+	@NotBlank
+	@Size(max = 15)
+	private String lastName;
+	@JsonIgnore
+	private String userName;
+	@JsonIgnore
+	private String password;
+	@Email
+	private String email;	
+	@Size(max = 150, min = 50)
+	private String address;
+	private States state;
+	@Size(max = 6, min = 6)
+	private String zipCode;
+	private Byte[] profilePic;
+	@NotBlank
+	@Size(max = 13, min = 10)
+	private String phoneNumber;
+	private LocalDateTime createdAt;
+	private LocalDateTime modifiedAt = LocalDateTime.now();
+
+}

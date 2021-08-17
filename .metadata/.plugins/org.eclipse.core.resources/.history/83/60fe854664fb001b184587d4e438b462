@@ -1,0 +1,6 @@
+package gmc.project.voldemart.security;
+
+@EnableWebSecurity
+public class WebSecurityConfiguration {
+
+}

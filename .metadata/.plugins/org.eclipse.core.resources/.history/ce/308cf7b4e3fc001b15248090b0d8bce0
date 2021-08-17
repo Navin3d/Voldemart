@@ -1,0 +1,21 @@
+package gmc.project.voldemart.converters;
+
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
+
+import gmc.project.voldemart.commands.ProductCommand;
+import gmc.project.voldemart.domain.Product;
+
+@Component
+public class ProductCommandToProduct implements Converter<ProductCommand, Product>{
+
+	@Override
+	public Product convert(ProductCommand source) {
+		
+		if(source == null)
+			return null;
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

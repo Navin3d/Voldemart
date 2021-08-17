@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" th:href="@{/css/profiled.css}" type="text/css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- changes -->
+    <div class="topbar" >
+        <div id="t1">
+        <ul class="ul">
+            
+            <li><a href="/products" id="logo"><b>VoldEMart</b></a></li>
+            <li><input list="user-list" class="psea"type="search" placeholder="/search-profile" ></li>
+            <datalist id="user-list">
+                <option>Add username from db </option>
+                <option >Navin</option>
+                <option >Koushik</option>
+                <option >Arul</option>
+                <option >Murugan</option>
+            </datalist>
+            <li><a href="/" >Home</a></li>
+            <li><a href="#" >About</a></li>
+            <li><a href="/user/profile/edit" >Edit Profile</a></li>
+            <li><form th:if="${condition}" th:action="@{/logout}" method="post"><input type="submit" value="Logout"/></form></li>
+            <i class="fas fa-bars" id="menu"></i>
+        </ul>
+    </div>
+    </div><br>
+    <div class="hide" id="alt" >
+        <li><a href="amakart.html" >Home</a></li>
+        <li><a href="#" >Shop</a></li>
+        <li><a href="#" >About</a></li>
+        <li><a href="profiled.html" >Edit Profile</a></li>
+        <li><a href="login.html" >Login</a></li>
+    </div>
+    <!-- changes -->
+<div class="contained">
+    <div class="profileTag">
+        <img class="proImg"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoYAbrTGLh7uh_uxA3cF0GXCxjAB2GBcywTA&usqp=CAU"/><br>
+        <label><b th:text="${user.firstName}">Arul Murugan R</b></label>
+        <label style="text-align:center;">(USER)</label>
+        <li class="active"><a href="/user/profile/edit">Edit Profile*</a></li>
+        <li><a href="/user/product/add">Add Product</a></li>
+        <li><a href="#">Add To Cart</a></li>
+        <li><a href="#">Notification</a></li>
+        <li><a href="#">Change Password</a></li>
+
+    </div>
+    
+    <div class="input">
+        <form th:action="@{/updateuser/}" th:object="${user}" method="post">
+        <p>User Profile</p>
+        
+        <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+        	<p>Please Correct Errors Below</p>
+        </div>
+        
+        <input class="int" type="text" th:field="*{id}" placeholder="" hidden><br><br>
+	
+        <label class="la">Firstname</label><br>
+        <input class="int" type="text" th:field="*{firstName}" placeholder=""><br><br>
+        <span class="help-block" th:if="${#fields.hasErrors('firstName')}">
+			<ul>
+				<li th:each="err : ${#fields.errors('firstName')}" th:text="${err}"/>
+			</ul>
+		</span>
+		
+        <label class="la">Lastname</label><br>
+        <input class="int" type="text" th:field="*{lastName}" placeholder=""><br><br>
+        <span class="help-block" th:if="${#fields.hasErrors('lastName')}">
+        	<ul>
+        		<li th:each="err : ${#fields.errors('lastName')}" th:text="${err}"></li>
+        	</ul>
+        </span>
+        
+	    <label class="la">Username</label><br>
+        <input class="int" type="text" th:field="*{userName}" placeholder=""><br><br> 
+        <span class="help-block" th:if="${#fields.hasErrors('userName')}">
+        	<ul>
+        		<li th:each="err : ${#fields.errors('userName')}" th:text="${err}"></li>
+        	</ul>
+        </span> 
+        
+        <label class="la">Password</label><br>
+        <input class="int" id="password" type="password" th:field="*{password}" />
+        <input type="checkbox" onclick="showPassword()" >Show Password</input><br><br>
+        <span class="help-block" th:if="${#fields.hasErrors('password')}">
+        	<ul>
+        		<li th:each="err : ${#fields.errors('password')}" th:text="${err}"></li>
+        	</ul>
+        </span>
+        
+        <label class="la">EmailId</label><br>
+        <input class="int" type="email" th:field="*{email}" placeholder=""><br><br>
+        <span class="help-block" th:if="${#fields.hasErrors('email')}">
+        	<ul>
+        		<li th:each="err : ${#fields.errors('email')}" th:text="${err}"></li>
+        	</ul>
+        </span>
+
+        <label class="la">Phone Number</label><br>
+        <input class="int" type="text" th:field="*{phoneNumber}" placeholder=""><br><br>
+        <span class="help-block" th:if="${#fields.hasErrors('phoneNumber')}">
+        	<ul>
+        		<li th:each="err : ${#fields.errors('phoneNumber')}" th:text="${err}"></li>
+        	</ul>
+        </span>
+        
+        <input type="datetime-local" th:field="*{createdAt}" hidden />
+        <input type="datetime-local" th:field="*{modifiedAt}" hidden />
+        
+        <label class="la">Image File</label><br>
+        <input  type="file" th:field="*{profilePic}" placeholder=""><br><br>
+        <button class="submit" >Edit Profile</button>
+    </div>
+</form>
+     
+</div>
+<script type="text/javascript" th:src="@{/js/productForm.js}"></script>
+    
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;voldemart/src/main/resources/templates/user/productCart.html&apos; to &apos;cart.html&apos;" description="Rename resource &apos;productCart.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/templates/user/productCart.html" name="cart.html" stamp="1629056782318" updateReferences="true"/>
+</session>

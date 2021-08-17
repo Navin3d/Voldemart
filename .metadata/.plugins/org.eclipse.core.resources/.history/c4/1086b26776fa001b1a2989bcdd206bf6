@@ -1,0 +1,15 @@
+package gmc.project.voldemart.domain;
+
+import javax.persistence.Entity;
+
+import lombok.Data;
+
+@Data
+@Entity
+public class Category {
+	
+	@Id
+	@GeneratedValue(atrategy = GenerationType.IDENTITY)
+	private Long id;
+
+}

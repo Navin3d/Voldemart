@@ -1,0 +1,19 @@
+package gmc.project.voldemart.converters;
+
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
+
+import gmc.project.voldemart.commands.UpdateUserCommand;
+import gmc.project.voldemart.domain.User;
+
+@Component
+public class UserToUpdateUserCommand implements Converter<User, UpdateUserCommand>{
+
+	@Override
+	@Synchronizeed
+	public UpdateUserCommand convert(User source) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

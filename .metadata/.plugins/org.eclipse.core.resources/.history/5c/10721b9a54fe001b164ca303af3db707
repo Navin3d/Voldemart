@@ -1,0 +1,23 @@
+#logging:
+#  level:
+#    org.springframework.security: DEBUG
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+server:
+  port: 8443
+  ssl:
+    key-store-password: navin@3d
+    key-store: classpath:mykeystore.p12
+    key-store-type: PKCS12
+    key-alias: tomcat
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      path: /admin/h2-console
+      enabled: true

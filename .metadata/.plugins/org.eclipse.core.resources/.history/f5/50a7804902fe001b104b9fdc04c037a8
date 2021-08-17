@@ -1,0 +1,6 @@
+package gmc.project.voldemart.services;
+
+@Service
+public class AdminServiceImpl implements AdminService {
+
+}

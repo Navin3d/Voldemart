@@ -1,0 +1,18 @@
+package gmc.project.voldemart.converters;
+
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.lang.Nullable;
+
+import gmc.project.voldemart.commands.ProductCommand;
+import gmc.project.voldemart.domain.Product;
+
+public class ProductToProductCommand implements Converter<Product, ProductCommand> {
+
+	@Override
+	@Nullable
+	public ProductCommand convert(Product source) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

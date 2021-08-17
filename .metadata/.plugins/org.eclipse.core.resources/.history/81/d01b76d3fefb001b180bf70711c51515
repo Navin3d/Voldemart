@@ -1,0 +1,5 @@
+package gmc.project.voldemart.domain;
+
+public enum Region {
+	TAMIL_NADU, PONDYCHERY, KERALA, ANDRAPRADESH, KARNATAKA, TELENGANA
+}

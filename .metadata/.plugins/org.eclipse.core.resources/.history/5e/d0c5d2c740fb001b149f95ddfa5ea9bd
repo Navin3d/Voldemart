@@ -1,0 +1,5 @@
+package gmc.project.voldemart.controllers;
+
+public class CategoryController {
+
+}

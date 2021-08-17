@@ -1,0 +1,17 @@
+package gmc.project.voldemart.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class AdminController {
+	
+	private final AdminService adminService;
+	
+	@GetMapping("/admin/users")
+	public String showAllUser(Model model) {
+		model.addAttribute("users", )
+	}
+
+}

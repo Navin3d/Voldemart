@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f6369706ad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/profile.css}" type="text/css" >
+    <title>Profile</title>
+</head>
+<body>
+    <!-- changes -->
+    <div class="topbar" >
+        <div id="t1">
+        <ul class="ul">
+            
+            <li><a href="/products" id="logo"><b>VoldEMart</b></a></li>
+            <li><input class="psea"type="search" placeholder="/search" ></li>
+            <li><a href="" >Home</a></li>
+            <li><a href="" >About</a></li>
+            <li><a href="/user/product/add" >Add Product</a></li>
+            <li><a href="/user/profile/edit" >Edit Profile</a></li>
+            <i class="fas fa-bars" id="menu"></i>
+        </ul>
+    </div>
+    </div><br>
+    <div class="hide" id="alt" >
+        <li><a href="amakart.html" >Home</a></li>
+        <li><a href="#" >Shop</a></li>
+        <li><a href="#" >About</a></li>
+        <li><a href="productd.html" >Add Product</a></li>
+        <li><a href="profiled.html" >Edit Profile</a></li>
+        <li><a href="login.html" >Login</a></li>
+    </div>
+    <!-- changes -->
+    <div class="bg">
+        <img class="bgi" src="../img/profilebg.jpg" />
+    </div>
+    <div class="edit"><i class="fas fa-pencil-alt">Edit</i></div>
+    <div class="drop">
+        <label class="label">ALLOW<i class="fa-solid fa-angle-down"></i></label><br>
+        <div class="hide" id="def">
+            <input id="seller" type="checkbox">
+            <label for="seller" >ADMIN</label><br>
+            <input id="seller" type="checkbox">
+            <label for="seller" >SUPERUSER</label><br>
+            <input id="seller" type="checkbox">
+            <label for="seller" >SELLER</label><br>
+            <input id="seller" type="checkbox">
+            <label for="seller" >BUYER</label><br>
+            <input id="seller" type="checkbox">
+            <label for="seller" >EMPTY</label><br>
+        </div>
+    </div>
+    <div class="profile">
+        <img class="imgp" src="../img/profileimg.png" />
+    </div>
+    <div class="content">
+        <br>
+        <label id="bold" th:text="${user.firstName}">ARUL MURUGAN R</label>
+        <label id="ba"><i class="fas fa-tags">USER</i></label><br><br>
+        <label>Date :<label id="tdate"></label></label>
+        <!-- <label>Profile Id : 3003</label><br>
+        <label>Product Counts :50</label><br>
+        <label>Name : Ajakax</label> -->
+    </div>
+    <div class="list">
+        <ul class="l1">
+            <li th:text="${}">Profile Id : 3003</li>
+            <li><a href="productd.html">Add Product</a></li>
+            <li><a href="#">Product Sold :50</a></li>
+            <li><a href="profiled.html">Edit Profile</a></li>
+            <li><a href="#">Products</a></li>
+            <!-- <li><a href="#">Settings</a></li> -->
+        </ul>
+    </div>
+    <input type="file" class="imgb">
+    <input type="file" class="imgbg">
+    <script th:src="@{/js/profile.js}"></script>
+    
+</body>
+</html>

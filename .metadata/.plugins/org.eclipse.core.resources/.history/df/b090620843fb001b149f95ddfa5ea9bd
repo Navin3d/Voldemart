@@ -1,0 +1,33 @@
+package gmc.project.voldemart.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import gmc.project.voldemart.services.CategoryService;
+import gmc.project.voldemart.services.ProductService;
+
+@Controller
+public class CategoryController {
+	
+	private final ProductService productService;
+	private final CategoryService categoryService;
+		
+	public CategoryController(CategoryService categoryService, ProductService productService) {
+		super();
+		this.productService = productService;
+		this.categoryService = categoryService;
+	}
+
+	@GetMapping({"", "/"})
+	public String showCategory(Model model) {
+		model.addAttribute("categories", categoryService.findAllCategory());
+		return "category";
+	}
+	
+	@GetMapping("category/{categories}")
+	public String showCategoryProducts(Categories categories,Model model) {
+		model.addAttribute("products", productService.getCategoryProducts(categories))
+	}
+	
+}
