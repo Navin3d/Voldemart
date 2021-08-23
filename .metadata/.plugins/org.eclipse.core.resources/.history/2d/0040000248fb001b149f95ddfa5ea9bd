@@ -1,8 +1,0 @@
-package gmc.project.voldemart.services;
-
-import gmc.project.voldemart.domain.User;
-
-public interface UserService {
-	User findById(Long id);
-	User findByUserUserName(String userName);
-}

@@ -1,9 +1,0 @@
-package gmc.project.voldemart.converters;
-
-import org.springframework.core.convert.converter.Converter;
-
-import gmc.project.voldemart.domain.Product;
-
-public class ProductToProductCommand implements Converter<Product, ProductCommand> {
-
-}

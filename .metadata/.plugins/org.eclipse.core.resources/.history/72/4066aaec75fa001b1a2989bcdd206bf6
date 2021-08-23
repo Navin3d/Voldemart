@@ -1,8 +1,0 @@
-package gmc.project.voldemart.bootstrap;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class CategoryBootstrap implements ApplicationListener<ContextRefreshedEvent>{
-
-}

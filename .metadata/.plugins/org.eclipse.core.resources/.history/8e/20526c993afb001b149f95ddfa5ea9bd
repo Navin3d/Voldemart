@@ -1,5 +1,0 @@
-package gmc.project.voldemart.exceptions;
-
-public class UserNotFoundException extends RunTimeException {
-
-}

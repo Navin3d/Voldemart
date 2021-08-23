@@ -1,5 +1,0 @@
-package gmc.project.voldemart.repositoies;
-
-public interface UserRepository {
-
-}

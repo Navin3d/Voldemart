@@ -1,6 +1,0 @@
-package gmc.project.voldemart.controllers;
-
-@Controller
-public class CategoryController {
-
-}

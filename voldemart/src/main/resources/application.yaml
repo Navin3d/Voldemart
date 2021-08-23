@@ -31,4 +31,6 @@ spring:
 #    console:
 #      path: /h2-console
 #      enabled: true
+# keytool -genkey -alias tomcat -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore mykeystore.p12
+
 

@@ -1,9 +1,0 @@
-package gmc.project.voldemart.security;
-
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-
-@Configuration
-@EnableWebSecurity
-public class WebSecurityConfiguration {
-
-}

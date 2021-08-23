@@ -1,5 +1,0 @@
-package gmc.project.voldemart.security;
-
-public class WebSecurityConfiguration {
-
-}

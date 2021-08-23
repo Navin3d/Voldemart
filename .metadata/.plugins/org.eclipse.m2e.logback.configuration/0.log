@@ -13589,3 +13589,37 @@
 2021-08-16 19:21:43,340 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@551b5bb9{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
 2021-08-16 19:21:43,373 [Stop Help Server] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
 2021-08-16 19:21:43,405 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@1637c7f7{/help,null,UNAVAILABLE}
+2021-08-18 16:54:39,045 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-08-18 17:04:52,256 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-08-18 17:06:23,515 [Worker-0: Launching voldemart - VoldemartApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-08-18 17:06:23,518 [Worker-0: Launching voldemart - VoldemartApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-08-18 17:06:23,527 [Worker-0: Launching voldemart - VoldemartApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-08-18 17:06:23,563 [Worker-0: Launching voldemart - VoldemartApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 34 resources
+2021-08-18 17:06:24,291 [Worker-0: Launching voldemart - VoldemartApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-08-18 17:06:24,291 [Worker-0: Launching voldemart - VoldemartApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-08-18 17:06:24,291 [Worker-0: Launching voldemart - VoldemartApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\SpringSuiteTool\voldemart\voldemart\src\test\resources
+2021-08-18 17:21:39,536 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-08-18 17:24:32,049 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-08-18 17:24:32,167 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-08-18 17:24:32,184 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-08-18 17:24:32,608 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 35 resources
+2021-08-18 17:24:32,751 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-08-18 17:24:32,752 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-08-18 17:24:32,753 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\SpringSuiteTool\voldemart\voldemart\src\test\resources
+2021-08-18 17:24:37,774 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gmc.project:voldemart:0.0.1-SNAPSHOT @ D:\Programming\Java\SpringSuiteTool\voldemart\voldemart\pom.xml.
+2021-08-18 17:24:42,206 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-08-18 17:24:42,206 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-08-18 17:24:42,212 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-08-18 17:24:42,212 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-08-18 17:24:42,221 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-08-18 17:24:42,222 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-08-18 17:24:42,223 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\SpringSuiteTool\voldemart\voldemart\src\test\resources
+2021-08-20 19:41:08,734 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-08-20 19:41:36,069 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-08-20 19:41:36,073 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-08-20 19:41:36,086 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-08-20 19:41:36,153 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 35 resources
+2021-08-20 19:41:36,302 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-08-20 19:41:36,302 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-08-20 19:41:36,302 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Programming\Java\SpringSuiteTool\voldemart\voldemart\src\test\resources
+2021-08-22 19:29:42,313 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

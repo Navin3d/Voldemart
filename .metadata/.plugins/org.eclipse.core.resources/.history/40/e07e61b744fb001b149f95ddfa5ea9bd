@@ -1,5 +1,0 @@
-package gmc.project.voldemart.exceptions;
-
-public class ProductNotFoundException extends RunTimeException {
-
-}

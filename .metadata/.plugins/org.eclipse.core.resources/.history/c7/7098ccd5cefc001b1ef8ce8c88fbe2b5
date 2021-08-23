@@ -1,5 +1,0 @@
-package gmc.project.voldemart.converters;
-
-public class ProductToProductCommand {
-
-}

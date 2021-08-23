@@ -1,7 +1,0 @@
-package gmc.project.voldemart.commands;
-
-@Getter
-@Setter
-public class CreateUserCommand {
-
-}
