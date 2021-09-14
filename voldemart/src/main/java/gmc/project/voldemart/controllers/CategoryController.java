@@ -35,7 +35,7 @@ public class CategoryController {
 	@GetMapping("category/{categories}")
 	public String showCategoryProducts(@PathVariable Categories categories, Model model) {
 		model.addAttribute("products", productService.getCategoryProducts(categories));
-		return "productsList";
+		return "product/productList";
 	}
 	
 }

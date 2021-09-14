@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f6369706ad.js" crossorigin="anonymous"></script>
+    <style>
+        ::-webkit-scrollbar{
+            width:10px;
+        }
+        
+        ::-webkit-scrollbar-thumb{
+            border-radius: 5px;
+            background-color:gray;
+            
+        }
+        ::-webkit-scrollbar-thumb:focus{
+            width:22px;
+        }
+        .topbar{
+            text-align: right;
+            /* background-color:#e83283; */
+            background:transparent;
+            padding:1px 0px;
+            background-color:rgb(0,0,0,0.5);
+        }
+        
+        #t1{
+            text-align:right;
+        }
+        #logo{
+            float:left;
+            font-size:17px;
+            
+        }
+        #logo:hover{
+            font-weight: bold;
+            color:rgb(255, 194, 27);
+            transition:0.5s;
+        }
+        .psea{
+            border:1px solid gray;
+            padding:5px;
+            width:15%;
+            text-align: right;
+            outline:none;
+            transition:width 0.4s ease-out;
+        }
+        .psea:focus{
+            border:0px;
+            outline:2px solid rgb(255, 194, 27);
+            width:30%;
+            text-align:left;
+        }
+        .topbar .ul li{
+            list-style:none;
+            display:inline;
+            padding:0px 15px;
+            width:100%;
+        }
+        .ul li{
+            color:white;
+        }
+        .ul li a{  
+            text-decoration: none;
+            color:white;
+            font-size: 17px;
+        }
+        .ul li a:hover,li i:hover{
+            /* border:1px solid white; */
+            font-weight: bold;
+            color:rgb(255, 194, 27);
+            transition:0.5s;
+        }
+        .topbar {
+            /* border-bottom:1px solid black; */
+            box-shadow: 0 2px 5px white;
+        
+        }
+        #menu{
+            font-size:35px;
+            padding:8px;
+            display: none;
+            color:white;
+            border:1px solid #fff;
+            border-radius: 12px;
+            margin-right:5px;
+        
+        }
+        
+        #alt{
+            text-align:left;
+            text-decoration: none;
+            list-style:none;
+            background-color:white;
+            font-weight:bold;
+            font-size:25px;
+            border-bottom:1px solid black;
+        }
+        #alt li a{
+            color:white;
+        
+        }
+        #alt li a:hover{
+            color:rgb(255, 194, 27);
+        }
+        .hide{
+            display:none;
+        }
+        .show{
+            display:inline;
+        }
+        @media (max-width:700px){
+            #menu{
+                display:inline;
+            }
+            .topbar .ul li{
+                display:none;
+            }
+        }
+        @media (min-width:700px){
+            #alt{
+                display:none;
+            }
+        }
+        /* top are changes */
+            /* for bottom */
+        #bottom{
+            margin-top:20px;
+        }
+        #bottom a:hover{
+            font-weight: bold;
+            color:rgb(255, 194, 27);
+            transition:0.5s;
+        }
+        #down{
+            width:100%;
+            color:black;
+            
+        }
+        #down a{
+            border:0;
+            text-decoration: none;
+            color:black;
+        }
+        .description-bottom{
+            background-color:gray;
+            color:black;
+
+        }
+        .description-bottom{
+            display:flex;
+        }
+        .description-bottom ul{
+            margin:0px 1%;
+        }
+        .description-bottom ul li{
+            font-size:20px;
+            list-style: none;
+        }
+        .description-bottom ul li a{
+            color:white;
+            text-decoration:none;
+        }
+        /* for the main content */
+        .container{
+            display:flex;
+            justify-content:space-around;
+            flex-wrap:wrap;
+        }
+        .product-filter{
+            width:200px;
+        }
+        .product-display-right{
+            border-left: 1.5px solid #818181ca;
+        }
+        .product-card{
+            display:flex;
+            margin:10px;
+            padding:10px;
+            width:900px;
+            word-wrap: wrap;
+            font-size: 17px;
+        }
+        .product-img{
+            width:280px;
+            height:160px;
+            box-sizing:border-box;
+        }
+        .img-tag{
+            width:280px;
+            height:160px;
+        }
+        /* for responsive*/
+        @media (max-width:940px){
+            .product-card{
+                width:600px;
+            }
+        }
+        @media (max-width:640px){
+            .product-card{
+                flex-wrap: wrap;
+                width:230px;
+            }
+        }
+    </style>
+    <title>Products</title>
+</head>
+<body>
+    <!-- <p><b>Online Oil Mart -- Feel Free to Shop</b></p> -->
+    <div class="topbar" >
+        <div id="t1">
+        <ul class="ul">
+            
+            <li><a href="/" id="logo">Voldemart</a></li>
+            <li>
+                
+                    <input list="list"class="psea"type="search" placeholder="/search" >
+                    <datalist id="list"> 
+                        <select>
+                        <option></option>
+                        
+                    </select> 
+                    </datalist>
+           
+            </li>
+            <li><a href="/" >Home</a></li>
+            <li><a href="#" >About</a></li>
+
+            <!-- Disable this when User logins to the page -->
+            <!-- <li class="status" >User Name</li> -->
+
+
+            <li><a href="/signup" >Sign Up</a></li>
+            <li><a href="/login" >Login</a></li>
+            <i class="fas fa-bars" id="menu"></i>
+            <li><a href="#"><i class="icon fas fa-shopping-cart"></i><sup>0</sup></a></li>
+        </ul>
+    </div>
+    </div><br>
+    <!-- main begins -->
+    <div class="container">
+        <div class="product-filter">
+            <input type="text" placeholder="Search" /><br><br>
+            <b>Range : </b><br>
+            <input type="rate" placeholder="MIN" /><input type="rate" placeholder="MAX" /><br><br>
+            <b>Price : </b><br>
+            <input type="checkbox" /><label >$0-1000</label><br>
+            <input type="checkbox" /><label >$1000-5000</label><br>
+            <input type="checkbox" /><label >$5000-10000</label><br>
+            <input type="checkbox" /><label >Above $10000</label><br><br>
+            <b>Product Name : </b><br>
+            <input type="checkbox" /><label >ASUS</label><br>
+            <input type="checkbox" /><label >DELL</label><br>
+            <input type="checkbox" /><label >HP</label><br>
+            <input type="checkbox" /><label >ACER</label><br><br>
+            <b>Color : </b><br>
+            <input type="color" /><br>
+        </div>
+        <div class="product-display-right">
+           
+            
+            <div class="product-card" th:each="product : ${products}">
+                <div class="product-img">
+                    <img class="img-tag" th:src="${product.imageUrl}" />
+                </div><br>
+                <div class="product-content">
+                    <label th:text="${product.name}">BINNUNE Wireless Gaming Headset with Microphone for PC PS4 PS5 Playstation 4 5, 2.4G Wireless Low Latency, Bluetooth Gamer 
+                        Headphones with Noise Cancelling Mic</label><br>
+                    <label>Product Name : RG Laptop</label><br>
+                    <label>Star Rating : </label>
+                    <i class="fas fa-star r1" id="r1"></i>
+                    <i class="fas fa-star r2" id="r2"></i>
+                    <i class="fas fa-star r3" id="r3"></i>
+                    <i class="fas fa-star r4" id="r4"></i>
+                    <i class="fas fa-star r5" id="r5"></i><br>
+                    <label class="product-price" th:text="@{'Price : '${product.price}}">Price : $40000</label><br>
+                </div><br>
+            </div>
+            
+
+
+
+    <!-- bottom -->
+    <div id="bottom">
+        <button id="down"><a href="#t1">Back To Top</a></button>
+        <label class="title">AMAKART</label>
+        <div class="description-bottom">
+            <ul class="ul-des-t1">
+                <li><a href="amakart.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Signup</a></li>
+            </ul>
+            <ul class="ul-des-t2">
+                <li><a href="/user/profile">Profile</a></li>
+                <li><a href="/user/profile/edit">Edit Profile</a></li>
+                <li><a href="#">View Product</a></li>
+                <li><a href="/user/product/add">Sell Product</a></li>
+            </ul>
+            <ul class="ul-des-t3">
+                <li><a href="#">Help</a></li>
+                <li><a href="/user/cart">Cart Page</a></li>
+                <li><a href="#">Seller's Profile</a></li>
+            </ul>
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: gmc.project.voldemart.VoldemartApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 17.757 s <<< FAILURE! - in gmc.project.voldemart.VoldemartApplicationTests
+contextLoads  Time elapsed: 0.018 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [D:\Programming\Java\SpringSuiteTool\voldemart\voldemart\target\classes\gmc\project\voldemart\controllers\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'gmc.project.voldemart.services.AdminService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'gmc.project.voldemart.services.AdminService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+

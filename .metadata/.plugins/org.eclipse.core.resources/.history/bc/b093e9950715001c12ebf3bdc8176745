@@ -1,0 +1,342 @@
+/* body{
+    margin:0;
+    background-image:linear-gradient(to right,rgb(30, 192, 241),#e83283);
+    /* background:linear-gradient(to right,lightblue,lightcoral); */
+    /* background-color:#33FF96; */
+    /* background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF-v0K2aT3_8vV0L1phK1X_9QBt6oiHWfwQA&usqp=CAU");
+    background-size:cover; 
+    
+} */
+/* body { 
+    background-image: linear-gradient(rgba(80, 79, 79, 0.315),rgba(80, 79, 79, 0.315)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF-v0K2aT3_8vV0L1phK1X_9QBt6oiHWfwQA&usqp=CAU");
+    background-image: linear-gradient(rgba(80, 79, 79, 0.315),rgba(80, 79, 79, 0.315)), url("https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    height: max-content; 
+    
+} */
+body{     
+    background-color:white;
+}
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color:gray;
+    
+}
+::-webkit-scrollbar-thumb:focus{
+    width:22px;
+}
+p{  border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    text-align:center;
+    padding:10px;
+}
+.topbar{
+    text-align: right;
+    background-color:rgb(255, 136, 0);
+    background-color:gray;
+    padding:2px;
+}
+
+.icon{
+    cursor:pointer;
+}
+#logo{
+    float:left;
+    font-size: 17px;
+    padding:0px 10px;
+}
+#logo:hover{
+    font-weight: bold;
+    color:rgb(255, 194, 27);
+    transition:0.5s;
+}
+.topbar .ul li{
+    list-style:none;
+    display:inline;
+}
+.ul li{
+    /* color:#761137; */
+    color:white;
+}
+.ul li a{  
+    text-decoration: none;
+    color:white;
+    font-size: 17px;
+    padding:0px 10px;
+}
+.ul li a:hover,li i:hover{
+    /* border:1px solid white; */
+    font-weight: bold;
+    color:rgb(255, 194, 27);
+    transition:0.5s;
+}
+.psea{
+    border:1px solid gray;
+    padding:5px;
+    width:15%;
+    text-align: right;
+    outline:none;
+    transition-duration: 0.6s;
+}
+.psea:focus{
+    border:0px;
+    outline:2px solid rgb(255, 194, 27);
+    width:30%;
+    text-align:left;
+}
+/* changes */
+    .status{
+        cursor:pointer;
+    }
+    .status:hover{
+        color:rgb(255, 194, 27);
+    }
+    .dropdown-menu{
+        position:absolute;
+        top:10%;
+        right:4%;
+        background-color:gray;
+        border:1px solid gray;
+        border-radius:5px;
+        list-style:none;
+        padding:0px;
+        display:none;
+    }
+    .dropdown-menu li:hover{
+        background-color:rgba(255,255,255,0.2)
+    }
+    .dropdown-menu li{
+        list-style:none;
+        margin:10px;
+    }
+    .dropdown-menu li a{
+        display:block;
+        color:white;
+        text-decoration: none;
+    }
+/* changes */
+#menu{
+    font-size:35px;
+    padding:8px;
+    display: none;
+    color:white;
+    border:1px solid white;
+    border-radius: 12px;
+    margin:5px;
+    text-align:left;
+}
+
+
+#alt li{
+    border-bottom:1px solid black;
+    padding:10px;
+}
+#alt li a{
+    color:white;
+    text-decoration: none;
+}
+#alt li a:hover{
+    color:rgb(255, 194, 27);
+}
+/* changes */
+
+#alt{
+    position: absolute;
+    height:100%;
+    width:90%;
+    background-color:gray;
+    text-align:left;
+    padding:10px;
+    list-style:none;
+    font-size:25px;
+    overflow:hidden;
+}
+#alt li a:hover{
+    font-weight:bold;
+}
+/* changes */
+.hide{
+    display:none;
+}
+.show{
+    display:inline;
+}
+
+#cat{
+    margin:0px 20px;
+    padding:5px 10px;
+    padding-top:0px;
+    background-color:#e83283;
+    border:1px solid #e83283;
+    color:#e83283;
+    font-size:25px;
+    color:white;
+}
+.center{
+    text-align:center;
+    display:none;
+}
+#sea{
+    padding:9px 20px;
+    font-size:25;
+    width:30%;
+    border:1px solid #761137;
+    background:transparent;
+    color:#761137;
+}
+
+#icons{
+    padding:5px 10px;
+    padding-top:0px;
+    background-color:transparent;
+    border:1px solid #761137;
+    color:#761137;
+    font-size:25px;
+}
+
+#cat:hover,#icons:hover{
+    background-color:rgba(10, 10, 7, 0.835);
+    transition:left 0.5s;
+    border:0;
+}
+
+#btn a{
+    border:0;
+    background: rgb(255, 136, 0);
+}
+/* .ul spam:hover{
+    display:block;
+} */
+#bottom{
+    position:relative;
+    bottom:0%;
+    left:0%;
+    right:0%;
+}
+#bottom a:hover{
+    font-weight: bold;
+    color:rgb(255, 194, 27);
+    transition:0.5s;
+}
+#down{
+    width:100%;
+    color:black;
+    
+}
+#down a{
+    border:0;
+    text-decoration: none;
+    color:black;
+}
+#des{
+    background:gray;
+    color:black;
+    padding:10px;
+
+}
+
+.img-effect{
+    width:200px;
+    height:100px;
+    margin:20px;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+.img-tag{
+    width:200px;
+    height:100px;
+    transform: scale(1);
+    transition-duration: 0.6s;
+}
+.card{
+    border-radius: 5px;
+    width:250px;
+    height:300px;
+    margin:15px;
+    padding:10px;
+    box-sizing: border-box;
+    display: inline-block;
+    background:	white;
+    text-align:center;
+    word-wrap: break-word;
+    box-shadow:2px 2px 5px gray;
+    /* border: 1px solid black; */
+}
+.card a{
+    text-decoration: none;
+
+}
+.img-tag:hover {
+    transform: scale(1.4);
+}
+/* .card:hover{
+    width:350px;
+    height:400px;
+} */
+#cards a{
+    color:black;
+}
+
+.card a:hover{
+    font-weight: bold;
+    transition:0.5s;
+}
+#cards .card{
+    cursor:pointer;
+}
+
+#cards{
+    margin:50px 100px;
+    display:flex;
+    justify-content:space-around ;
+    flex-wrap:wrap;
+    
+}
+.right{
+    position:relative;
+    left:20%;
+    display:inline;
+    justify-content:space-around ;
+    flex-wrap:wrap;
+}
+.right .card{
+    margin:30px;
+}
+/* changes */
+/* body{
+    background:linear-gradient(to right,lightblue,lightblue);
+    background-color:#5bccf6;
+} */
+/* changes */
+@media (max-width:700px){
+    #menu{
+        display:inline;
+    }
+    .topbar .ul li{
+        display:none;
+    }
+    .dropdown-menu{
+        display:none;
+    }
+    /* .topbar .ul li #logo{
+        display:flex;
+    }
+    #logo{
+        text-align:center;
+        font-size:20px;
+    } */
+    .center{
+        display:inline;
+    }
+}
+@media (min-width:700px){
+    #alt{
+        display:none;
+    }
+}

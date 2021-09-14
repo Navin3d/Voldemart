@@ -28,13 +28,13 @@ public class ProductController {
 	@GetMapping("/products")
 	public String showAllProducts(Model model) {
 		model.addAttribute("products", productService.getAllProducts());
-		return "/product/productsList";
+		return "/product/productList";
 	}
 	
 	@GetMapping("/product/{productId}/show")
-	public String showProduct(@PathVariable Long id, Model model) {
-		model.addAttribute("product", productService.findProductById(Long.valueOf(id)));
-		return "productCard";
+	public String showProduct(@PathVariable Long productId, Model model) {
+		model.addAttribute("product", productService.findProductById(Long.valueOf(productId)));
+		return "product/productCard";
 	}
 	
 	@PostMapping("/product/")

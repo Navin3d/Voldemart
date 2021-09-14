@@ -1,9 +1,0 @@
-package gmc.project.voldemart.services;
-
-import java.util.Set;
-
-import gmc.project.voldemart.domain.User;
-
-public interface AdminService {
-	Set<User> findAllUser();
-}
