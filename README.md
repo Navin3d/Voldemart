@@ -1,2 +1,2 @@
 # Voldemart
-This is my first complete project using spring boot.
+This is an Professonal ecommerce app build using spring boot.
