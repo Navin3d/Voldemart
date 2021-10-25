@@ -259,7 +259,7 @@
             <input type="color" /><br>
         </div>
         <div class="product-display-right">
-           <a th:each="product : ${products}" th:href="@{'/product/' + {product.id} + '/show'}" >
+           <a th:each="product : ${products}" th:href="@{'/product/' + ${product.id} + '/show'}" >
             
             <div class="product-card">
                 <div class="product-img">
