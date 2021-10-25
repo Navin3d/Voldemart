@@ -16,7 +16,7 @@
 	<description>This is our first group project.</description>
 	<properties>
 		<java.version>11</java.version>
-		<maven.compiler.release>8</maven.compiler.release>
+		<maven.compiler.release>11</maven.compiler.release>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -99,6 +99,7 @@
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
