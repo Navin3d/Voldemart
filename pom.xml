@@ -15,7 +15,7 @@
 	<name>voldemart</name>
 	<description>This is our first group project.</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
