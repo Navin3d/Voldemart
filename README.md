@@ -6,4 +6,4 @@ This is an Professonal ecommerce app build using spring boot.
 ```bash
 UserName: reddy 
 Password: reddy
----
+```
