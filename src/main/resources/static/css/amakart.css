@@ -48,8 +48,8 @@ p{  border-bottom: 1px solid black;
 }
 #logo{
     float:left;
-    font-size: 17px;
-    padding:0px 10px;
+    position:relative;
+    top:17%;
 }
 #logo:hover{
     font-weight: bold;
@@ -120,6 +120,7 @@ p{  border-bottom: 1px solid black;
         color:white;
         text-decoration: none;
     }
+    
 /* changes */
 #menu{
     font-size:35px;
@@ -147,7 +148,11 @@ p{  border-bottom: 1px solid black;
 /* changes */
 
 #alt{
-    position: absolute;
+    position: fixed;
+    top:20%;
+    bottom:0;
+    left:0;
+    right:0;
     height:100%;
     width:90%;
     background-color:gray;
@@ -155,7 +160,6 @@ p{  border-bottom: 1px solid black;
     padding:10px;
     list-style:none;
     font-size:25px;
-    overflow:hidden;
 }
 #alt li a:hover{
     font-weight:bold;
@@ -191,6 +195,7 @@ p{  border-bottom: 1px solid black;
     color:#761137;
 }
 
+
 #icons{
     padding:5px 10px;
     padding-top:0px;
@@ -213,12 +218,7 @@ p{  border-bottom: 1px solid black;
 /* .ul spam:hover{
     display:block;
 } */
-#bottom{
-    position:relative;
-    bottom:0%;
-    left:0%;
-    right:0%;
-}
+
 #bottom a:hover{
     font-weight: bold;
     color:rgb(255, 194, 27);
@@ -234,7 +234,7 @@ p{  border-bottom: 1px solid black;
     text-decoration: none;
     color:black;
 }
-#des{
+.description-bottom{
     background:gray;
     color:black;
     padding:10px;
@@ -251,7 +251,6 @@ p{  border-bottom: 1px solid black;
 .img-tag{
     width:200px;
     height:100px;
-    transform: scale(1);
     transition-duration: 0.6s;
 }
 .card{
@@ -307,6 +306,19 @@ p{  border-bottom: 1px solid black;
 }
 .right .card{
     margin:30px;
+}
+.description-bottom{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.description-bottom ul li{
+    font-size:20px;
+    list-style: none;
+}
+.description-bottom ul li a{
+    color:white;
+    text-decoration:none;
 }
 /* changes */
 /* body{

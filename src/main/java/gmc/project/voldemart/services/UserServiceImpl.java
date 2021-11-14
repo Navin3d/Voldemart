@@ -1,10 +1,13 @@
 package gmc.project.voldemart.services;
 
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.context.annotation.Lazy;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import gmc.project.voldemart.commands.UpdateUserCommand;
@@ -32,6 +35,8 @@ public class UserServiceImpl implements UserService {
 		this.userToUpdateUserCommand = userToUpdateUserCommand;
 		this.updateUserCommandToUser = updateUserCommandToUser;
 	}
+	
+//	public User CreateUser
 	
 	@Override
 	public Long findUserIdByName(Principal principal) {
@@ -136,6 +141,13 @@ public class UserServiceImpl implements UserService {
 		
 		userRepository.save(requestingUser);
 		
+	}
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		User foundUser = findUserByUserName(username);
+		if(foundUser == null) throw new UserNotFoundException();
+		return new org.springframework.security.core.userdetails.User(foundUser.getUserName(), foundUser.getPassword(), true, true, true, true, new ArrayList<>());
 	}
 
 }

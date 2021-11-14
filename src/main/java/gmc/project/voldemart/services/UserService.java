@@ -2,10 +2,13 @@ package gmc.project.voldemart.services;
 
 import java.security.Principal;
 
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 import gmc.project.voldemart.commands.UpdateUserCommand;
 import gmc.project.voldemart.domain.User;
 
-public interface UserService {
+public interface UserService extends UserDetailsService {
+//	User createUser(Crea)
 	Long findUserIdByName(Principal principal);
 	User findById(Long id);
 	User findUserByUserName(String userName);

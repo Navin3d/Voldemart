@@ -7,13 +7,7 @@
     <link rel="stylesheet" th:href="@{/css/amakart.css}" type="text/css" >
     <script src="https://kit.fontawesome.com/f6369706ad.js" crossorigin="anonymous"></script>
     <title>Voldemart</title>
-    <style>
-        sup{
-            border-radius: 50%;
-            background-color:gray;
-            padding:5px 3px;
-        }
-    </style>
+    
 </head>
 <body style="overflow:none;">
     <!-- <p><b>Online Oil Mart -- Feel Free to Shop</b></p> -->
@@ -21,7 +15,7 @@
         <div id="t1">
         <ul class="ul" th:with="condition = ${#authorization.expression('isAuthenticated()')}" >
             
-            <li><a href="#" id="logo">Voldemart</a></li>
+            <li><a href="/" id="logo">Voldemart</a></li>
             <!-- <img src="logooil.jpg" alt="logo" id="logoi" > -->
             <li>
                 
@@ -173,14 +167,31 @@
                 <li>Contact Us</li>
         </ul>
     </div> -->
-    <!-- Bottom -->
+    <!-- bottom -->
     <div id="bottom">
         <button id="down"><a href="#t1">Back To Top</a></button>
-        <div id="des">
-            <label>Designed By the Tech Team : NKA</label><br>
-            <label>Websites Made By Tech Team :<a href="#"></a></label><br>
-            <label>Contact No : 4668858967</label><br>
+        <label class="title">Voldemart</label>
+        <div class="description-bottom">
+            <ul class="ul-des-t1">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Signup</a></li>
+            </ul>
+            <ul class="ul-des-t2">
+                <li><a href="/user/profile">Profile</a></li>
+                <li><a href="/user/profile/edit">Edit Profile</a></li>
+                <li><a href="#">View Product</a></li>
+                <li><a href="/user/product/add">Sell Product</a></li>
+            </ul>
+            <ul class="ul-des-t3">
+                <li><a href="#">Help</a></li>
+                <li><a href="/user/cart">Cart Page</a></li>
+                <li><a href="#">Seller's Profile</a></li>
+            </ul>
         </div>
+        
+
     </div>
     <script src="../js/amakart.js" type="text/javascript" ></script>
 
