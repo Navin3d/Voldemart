@@ -3,8 +3,6 @@ package gmc.project.voldemart.bootstrap;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.context.ApplicationListener;
-import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
 import gmc.project.voldemart.domain.Categories;
@@ -12,7 +10,7 @@ import gmc.project.voldemart.domain.Category;
 import gmc.project.voldemart.repositoies.CategoryRepository;
 
 @Component
-public class CategoryBootstrap implements ApplicationListener<ContextRefreshedEvent>{
+public class CategoryBootstrap {
 	
 	private final CategoryRepository categoryRepository;
 
@@ -20,7 +18,7 @@ public class CategoryBootstrap implements ApplicationListener<ContextRefreshedEv
         this.categoryRepository = categoryRepository;
     }
 
-    public List<Category> getCategory() {
+    private List<Category> getCategory() {
         List<Category> categoryList = new ArrayList<>();
 
         Category mobiles = new Category();
@@ -80,8 +78,7 @@ public class CategoryBootstrap implements ApplicationListener<ContextRefreshedEv
 		return categoryList;
     }
 
-	@Override
-	public void onApplicationEvent(ContextRefreshedEvent event) {
+	public void execute() {
 		categoryRepository.saveAll(getCategory());
 	}
 

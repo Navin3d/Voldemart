@@ -6,9 +6,6 @@ import java.util.Optional;
 
 import javax.transaction.Transactional;
 
-import org.springframework.context.ApplicationListener;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
 import gmc.project.voldemart.domain.Categories;
@@ -21,7 +18,7 @@ import gmc.project.voldemart.repositoies.ProductRepository;
 import gmc.project.voldemart.repositoies.UserRepository;
 
 @Component
-public class ProductBootStrap implements ApplicationListener<ContextRefreshedEvent>{
+public class ProductBootStrap {
 	
 	private final ProductRepository productRepository;
 	private final UserRepository userRepository;
@@ -33,7 +30,7 @@ public class ProductBootStrap implements ApplicationListener<ContextRefreshedEve
 		this.categoryRepository = categoryRepository;
 	}
 
-	public List<Product> getProducts() {
+	private List<Product> getProducts() {
 
 		List<Product> productsList = new ArrayList<>();
 
@@ -432,9 +429,8 @@ public class ProductBootStrap implements ApplicationListener<ContextRefreshedEve
 		return productsList;
 	}
 
-	@Override
 	@Transactional
-	public void onApplicationEvent(ContextRefreshedEvent event) {
+	public void execute() {
 		productRepository.saveAll(getProducts());
 	}
 
