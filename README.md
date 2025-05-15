@@ -75,3 +75,32 @@ public class SslConfig {
     }
 }
 ```
+
+
+```
+keytool -genkeypair -alias mycert -keyalg RSA -keysize 2048 -storetype JKS -keystore keystore.jks -validity 3650
+
+server.port=8443
+server.ssl.enabled=true
+server.ssl.key-store=classpath:keystore.jks
+server.ssl.key-store-password=yourpassword
+server.ssl.key-store-type=JKS
+server.ssl.key-alias=mycert
+
+
+@Configuration
+public class WebServerConfig {
+
+    @Bean
+    public WebServerFactoryCustomizer<TomcatServletWebServerFactory> containerCustomizer() {
+        return server -> {
+            Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
+            connector.setPort(8080);
+            connector.setScheme("http");
+            connector.setSecure(false);
+            connector.setRedirectPort(8443);
+            server.addAdditionalTomcatConnectors(connector);
+        };
+    }
+}
+```
