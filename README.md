@@ -50,3 +50,28 @@ public class HttpsRedirectConfig {
     }
 }
 ```
+```
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.server.Ssl;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SslConfig {
+
+    @Bean
+    public TomcatServletWebServerFactory servletContainer() {
+        TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
+
+        Ssl ssl = new Ssl();
+        ssl.setEnabled(true);
+        ssl.setKeyStore("classpath:file.jks");
+        ssl.setKeyStoreType("JKS");
+        ssl.setKeyStorePassword("");  // <- empty string here
+        ssl.setKeyAlias("yourAliasHere");
+
+        factory.setSsl(ssl);
+        return factory;
+    }
+}
+```
