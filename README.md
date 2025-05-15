@@ -19,3 +19,7 @@ server.ssl.key-store-password=your_keystore_password
 server.ssl.key-store-type=JKS
 server.ssl.key-alias=myalias
 ```
+```
+keytool -genkeypair -alias mysslcert -keyalg RSA -keysize 2048 \
+  -storetype PKCS12 -keystore keystore.p12 -validity 3650
+```
