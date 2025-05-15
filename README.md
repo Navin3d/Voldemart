@@ -12,3 +12,10 @@ Back-end is perfectly fine the Front-end need some modifications.
 UserName: reddy 
 Password: reddy
 ```
+```
+server.port=8443
+server.ssl.key-store=classpath:keystore.jks
+server.ssl.key-store-password=your_keystore_password
+server.ssl.key-store-type=JKS
+server.ssl.key-alias=myalias
+```
