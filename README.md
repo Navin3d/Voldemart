@@ -129,3 +129,7 @@ public class HttpToHttpsRedirectConfig {
 }
 
 ```
+```
+server.tomcat.relaxed-path-chars=<>[]^`{}|\\
+server.tomcat.relaxed-query-chars=<>[]^`{}|\\
+```
