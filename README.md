@@ -133,3 +133,32 @@ public class HttpToHttpsRedirectConfig {
 server.tomcat.relaxed-path-chars=<>[]^`{}|\\
 server.tomcat.relaxed-query-chars=<>[]^`{}|\\
 ```
+
+
+```
+import org.apache.catalina.connector.Connector;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class HttpToHttpsRedirectConfig {
+
+    @Bean
+    public TomcatServletWebServerFactory servletContainer() {
+        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
+        tomcat.addAdditionalTomcatConnectors(httpConnector());
+        return tomcat;
+    }
+
+    private Connector httpConnector() {
+        Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
+        connector.setScheme("http");
+        connector.setPort(80); // You can use any port for HTTP, e.g., 8081
+        connector.setSecure(false);
+        connector.setRedirectPort(8080); // This is your HTTPS port
+        return connector;
+    }
+}
+```
