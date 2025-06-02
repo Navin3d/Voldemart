@@ -162,3 +162,32 @@ public class HttpToHttpsRedirectConfig {
     }
 }
 ```
+
+```
+set-pipeline-name:
+  stage: show-info
+  script:
+    - |
+      if [[ "$RUN_DEPLOY" == "false" && "$RUN_RELEASE" == "false" ]]; then
+        NEW_NAME="$CI_COMMIT_MESSAGE"
+      elif [[ "$RUN_RELEASE" == "true" && "$RUN_DEPLOY" == "false" ]]; then
+        NEW_NAME="Release created with revision $revision"
+      elif [[ "$RUN_DEPLOY" == "true" && "$RUN_RELEASE" == "false" ]]; then
+        NEW_NAME="With TAG: $revision ACTION: $ACTION INVENTORY: $INVENTORY_NAME"
+      elif [[ "$RUN_DEPLOY" == "true" && "$RUN_RELEASE" == "true" ]]; then
+        NEW_NAME="RELEASE + DEPLOY — Revision $revision, ACTION: $ACTION, INVENTORY: $INVENTORY_NAME"
+      else
+        NEW_NAME="Unknown pipeline state"
+      fi
+
+      echo "Setting pipeline title to: $NEW_NAME"
+
+      curl --request PUT \
+        --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+        --header "Content-Type: application/json" \
+        --data "{\"name\": \"$NEW_NAME\"}" \
+        "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/pipelines/$CI_PIPELINE_ID"
+  rules:
+    - when: always
+
+```
